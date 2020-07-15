@@ -25,6 +25,13 @@ inquirer
       type: "checkbox",
       message: "What kind of license should your project have?",
       name: "stack",
+      choices: [
+        "MIT",
+        "APACHE 2.0",
+        "GPL 3.0",
+        "BSD 3",
+        "NONE",
+      ]
     },
     {
       type: "input",
