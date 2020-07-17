@@ -11,5 +11,8 @@
 - Usage
 - License
 - Contributing
+  My name is Borjan Bartula for the purposes of GitHub I am Mr Business87.
 - Tests
+  Initial Test on 07/14/2020 for questions to display as a node application worked.
+  Second Test on 07/15/2020 for questions to be saved to a txt file by using the username that is input in the questionnaire is used, but lowercased for easier access later.
 - Questions
