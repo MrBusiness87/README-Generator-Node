@@ -1,4 +1,5 @@
 var inquirer = require("inquirer");
+var fs = require("fs");
 
 // array of questions for user
 const questions = [{
@@ -49,17 +50,25 @@ const questions = [{
     message: "What does the user need to know about contributing to the repo?",
     name: "contributing",
   },
-
 ];
 
 // function to write README file
-function writeToFile(fileName, data) {}
+// function writeToFile(fileName, data) {
+//   var fileName = data.title.toLowerCase().split(" ").join("") + ".md";
+//   var data = inquirer;
 
+//   fs.writeFile(fileName, JSON.stringify(data, null, "\t"), function (err) {
+//     if (err) {
+//       return console.log(err);
+//     }
+
+//     console.log("Success!");
+//   });
+// };
 // function to initialize program
 function init() {
-
-}
+  inquirer.prompt(questions);
+};
 
 // function call to initialize program
 init();
-inquirer.prompt(questions)
