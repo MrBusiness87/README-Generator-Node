@@ -1,5 +1,6 @@
 var inquirer = require("inquirer");
 var fs = require("fs");
+var generateMarkdown = require("./utils/generateMarkdown")
 
 // array of questions for user
 const questions = [{
@@ -24,7 +25,7 @@ const questions = [{
   },
   {
     type: "checkbox",
-    message: "What kind of license should your project have?",
+    message: "What kind of license should your project have? (choose one)",
     name: "stack",
     choices: ["MIT", "APACHE 2.0", "GPL 3.0", "BSD 3", "NONE"],
   },
@@ -55,18 +56,16 @@ const questions = [{
 ];
 
 // function to write README file
-function writeToFile(data) {
-
-};
+function writeToFile(data) {}
 // function to initialize program
 function init() {
   inquirer.prompt(questions).then(function (data) {
     var filename = data.title.toLowerCase().split(" ").join("") + ".md";
-    fs.writeFile(filename, JSON.stringify(data, null, "\t"), function (err) {
+    fs.writeFile(filename, generateMarkdown(data), function (err) {
       if (err) {
         return console.log(err);
       }
-      console.log("Success!");
+      console.log("!FILE CREATED!");
     });
   });
 }
