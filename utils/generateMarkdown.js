@@ -22,8 +22,31 @@ function generateMarkdown(data) {
     data.stack[0] === "MIT" + "APACHE 2.0" + "GPL 3.0" + "BSD 3" + "NONE" ? 
     "![](https://img.shields.io/badge/license-MIT-brightgreen)" + "![](https://img.shields.io/badge/license-Apache-critical)" + "![](https://img.shields.io/badge/license-GPLv3-blueviolet)" + "![](https://img.shields.io/badge/license-BSD3-informational)" + "![](https://img.shields.io/badge/license-NONE-lightgrey)" : ""
   }
-  
-  ## License:
+  \n
+  ## Table of Contents:
+  * [Title](#Title)
+  * [Description](#Description)
+  * [Installation](#Installation)
+  * [Contribution](#Contribution)
+  * [License](#License)
+  * [Questions/Concerns/Comments](#Questions/Concerns/Comments)
+
+  \n
+  ### Title
+  ${data.title}
+  \n
+  ### Description
+  ${data.description}
+  \n
+  ### Installation
+  ${"The command to install dependencies is: " + data.command}
+  ${"The command to run your tests is: " + data.test}
+  ${data.installing}
+  \n
+  ### Contribution
+  ${data.contributing}
+  \n
+  ### License:
   ${
     data.stack[0] === "MIT" ? "A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code. <br>Link: https://choosealicense.com/licenses/mit/" : ""
   }
@@ -39,7 +62,10 @@ function generateMarkdown(data) {
   ${
     data.stack[0] === "NONE" ? "When there is no license there is no copyright, except the one you create yourself." : ""
   }
-
+  \n
+  ### Questions/Concerns/Comments:
+  * ${"GitHub Page: " + "https://github.com/" + data.username}
+  * ${"Email is: " + data.email}
   `;
 }
 
