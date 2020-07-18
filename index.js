@@ -15,7 +15,7 @@ const questions = [{
   {
     type: "input",
     message: "What is your projects name?",
-    name: "project",
+    name: "title",
   },
   {
     type: "input",
@@ -32,13 +32,15 @@ const questions = [{
     type: "input",
     message: "What command should be run to install dependencies?",
     name: "command",
-    //npm i
+    choices: "npm i",
+    default: "npm i",
   },
   {
     type: "input",
     message: "What command should be run to run tests?",
     name: "test",
-    //npm test
+    choices: "npm test",
+    default: "npm test",
   },
   {
     type: "input",
@@ -53,22 +55,21 @@ const questions = [{
 ];
 
 // function to write README file
-// function writeToFile(fileName, data) {
-//   var fileName = data.title.toLowerCase().split(" ").join("") + ".md";
-//   var data = inquirer;
+function writeToFile(data) {
 
-//   fs.writeFile(fileName, JSON.stringify(data, null, "\t"), function (err) {
-//     if (err) {
-//       return console.log(err);
-//     }
-
-//     console.log("Success!");
-//   });
-// };
+};
 // function to initialize program
 function init() {
-  inquirer.prompt(questions);
-};
+  inquirer.prompt(questions).then(function (data) {
+    var filename = data.title.toLowerCase().split(" ").join("") + ".md";
+    fs.writeFile(filename, JSON.stringify(data, null, "\t"), function (err) {
+      if (err) {
+        return console.log(err);
+      }
+      console.log("Success!");
+    });
+  });
+}
 
 // function call to initialize program
 init();
