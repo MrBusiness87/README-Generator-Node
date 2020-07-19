@@ -24,6 +24,11 @@ const questions = [{
     name: "description",
   },
   {
+    type: "input",
+    message: "Provide some examples for use of your application:",
+    name: "usage",
+  },
+  {
     type: "checkbox",
     message: "What kind of license should your project have? (choose one)",
     name: "stack",
