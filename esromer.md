@@ -19,8 +19,11 @@
   * [Test](#Test)
   * [License](#License)
   * [Questions](#Questions)
-  <br>
+  
+
   ---
+  
+
   ### Title:
   ESROMER
   
@@ -30,7 +33,7 @@
   
 
   ### Installation:
-  The command to install dependencies is: npm i
+  The command to install dependencies is: npm i. 
   Make sure you have all appropriate files and your npm files as well.
   
 

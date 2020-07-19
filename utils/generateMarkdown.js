@@ -29,9 +29,9 @@ function generateMarkdown(data) {
   * [Test](#Test)
   * [License](#License)
   * [Questions](#Questions)
-  <br>
+  \n
   ${"---"}
-  <br>
+  \n
   ### Title:
   ${data.title}
   \n
@@ -39,7 +39,7 @@ function generateMarkdown(data) {
   ${data.description}
   \n
   ### Installation:
-  ${"The command to install dependencies is: " + data.command}
+  ${"The command to install dependencies is: " + data.command + ". "}
   ${data.installing}
   \n
   ### Usage:
