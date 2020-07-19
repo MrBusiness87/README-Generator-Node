@@ -19,7 +19,7 @@ function generateMarkdown(data) {
     data.stack[0] === "NONE" ? "![](https://img.shields.io/badge/license-NONE-lightgrey)" : ""
   }
   \n
-  ${"--------------------------------------------------"}
+  ${"---"}
   ## Table of Contents:
   * [Title](#Title)
   * [Description](#Description)
@@ -29,13 +29,14 @@ function generateMarkdown(data) {
   * [Test](#Test)
   * [License](#License)
   * [Questions](#Questions)
-  ${"--------------------------------------------------"}
+  <br>
+  ${"---"}
   ### Title:
   ${data.title}
   \n
   ### Description:
   ${data.description}
-  ${"--------------------------------------------------"}
+  \n
   ### Installation:
   ${"The command to install dependencies is: " + data.command}
   ${data.installing}
@@ -48,7 +49,6 @@ function generateMarkdown(data) {
   \n
   ### Test:
   ${"The command to run your tests is: " + data.test}
-  ${"--------------------------------------------------"}
   ### License:
   ${
     data.stack[0] === "MIT" ? "MIT License: <br>A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code. <br>Link: https://choosealicense.com/licenses/mit/" : ""
@@ -65,7 +65,7 @@ function generateMarkdown(data) {
   ${
     data.stack[0] === "NONE" ? "License None: <br>When there is no license there is no copyright, except the one you create yourself." : ""
   }
-  ${"--------------------------------------------------"}
+  ${"---"}
   ### Questions:
   * ${"GitHub Page: " + "https://github.com/" + data.username}
   * ${"Please send an email to: " + data.email + ", with any Questions/Concerns/Comments!"}
