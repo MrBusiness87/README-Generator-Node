@@ -27,7 +27,7 @@ This application is used to create the initial README file for any project. It d
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+Link to a DEMO video on how to use the application: https://drive.google.com/file/d/1fXtRFc8gkI2u-qZqqKyhHd6V4E-nQUKa/view?usp=sharing
 
 ## Contributing
 
