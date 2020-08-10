@@ -5,27 +5,27 @@ var generateMarkdown = require("./utils/generateMarkdown")
 // array of questions for user
 const questions = [{
     type: "input",
-    message: "What is your GitHub username?",
+    message: "GitHub username:",
     name: "username",
   },
   {
     type: "input",
-    message: "What is your email address?",
+    message: "Email address:",
     name: "email",
   },
   {
     type: "input",
-    message: "What is your projects name?",
+    message: "Project name:",
     name: "title",
   },
   {
     type: "input",
-    message: "Please write a short description of your project:",
+    message: "Description of your project:",
     name: "description",
   },
   {
     type: "input",
-    message: "Provide some examples for use of your application:",
+    message: "Examples of use for application:",
     name: "usage",
   },
   {
@@ -36,26 +36,17 @@ const questions = [{
   },
   {
     type: "input",
-    message: "What command should be run to install dependencies?",
+    message: "Dependencies needed:",
     name: "command",
-    choices: "npm i",
-    default: "npm i",
   },
   {
     type: "input",
-    message: "What command should be run to run tests?",
-    name: "test",
-    choices: "npm test",
-    default: "npm test",
-  },
-  {
-    type: "input",
-    message: "What does the user need to know about installing the repo?",
+    message: "Installing the repo:",
     name: "installing",
   },
   {
     type: "input",
-    message: "What does the user need to know about contributing to the repo?",
+    message: "Contributing to repo:",
     name: "contributing",
   },
 ];

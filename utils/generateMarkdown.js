@@ -19,6 +19,9 @@ function generateMarkdown(data) {
     data.stack[0] === "NONE" ? "![](https://img.shields.io/badge/license-NONE-lightgrey)" : ""
   }
   \n
+  ${"![GIF](#link for GIF#)"}
+  ${"[Video LINK](#link to website video#)"}
+  \n
   ${"---"}
   ## Table of Contents:
   * [Title](#Title)
@@ -26,7 +29,6 @@ function generateMarkdown(data) {
   * [Installation](#Installation)
   * [Usage](#Usage)
   * [Contribution](#Contribution)
-  * [Test](#Test)
   * [License](#License)
   * [Questions](#Questions)
   \n
@@ -48,8 +50,6 @@ function generateMarkdown(data) {
   ### Contribution:
   ${data.contributing}
   \n
-  ### Test:
-  ${"The command to run your tests is: " + data.test}
   ### License:
   ${
     data.stack[0] === "MIT" ? "MIT License: <br>A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code. <br>Link: https://choosealicense.com/licenses/mit/" : ""
